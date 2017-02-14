@@ -1,13 +1,53 @@
-cornice==0.16.2
-gunicorn==19.1.1
-pyramid==1.5
-WebOb==1.4.1
-requests==2.10
-simplejson==3.4
-SQLAlchemy==0.9.4
-unittest2==0.5.1
-zope.component==4.2.1
-configparser==3.5.0b2
-mozsvc==0.9
-https://github.com/mozilla-services/tokenserver/archive/1.2.23.zip
-https://github.com/mozilla-services/server-syncstorage/archive/f0190c0eb730e2cd1fbaf89f95c50114b6289042.zip
+# -------------------------------------
+# required for the period of transition
+# -------------------------------------
+
+-e file:../konfig#egg=konfig
+# konfig >= 2.0
+# git+https://github.com/return42/konfig@six#egg=konfig
+
+-e file:../tokenlib#egg=tokenlib
+# tokenlib >= 2.0
+# git+https://github.com/return42/tokenlib@six#egg=tokenlib
+
+-e file:../PyBrowserID#egg=PyBrowserID
+# PyBrowserID >= 2.0
+# git+https://github.com/return42/PyBrowserID@six#egg=PyBrowserID
+
+-e file:../hawkauthlib#egg=hawkauthlib
+# hawkauthlib >= 2.0
+# git+https://github.com/return42/hawkauthlib@six#egg=hawkauthlib
+
+-e file:../pyramid_hawkauth#egg=pyramid_hawkauth
+# pyramid_hawkauth >= 2.0
+# git+https://github.com/return42/pyramid_hawkauth@six#egg=pyramid_hawkauth
+
+# --------
+# requires
+# --------
+
+-e file:../mozservices#egg=mozsvc
+# mozservices >= 2.0
+# git+https://github.com/return42/mozservices@six#egg=mozsvc
+
+-e file:../tokenserver#egg=tokenserver
+# tokenserver >= 2.0
+# git+https://github.com/return42/tokenserver@six#egg=tokenserver
+
+pyramid
+requests
+zope.interface
+webtest
+testfixtures
+
+# --------
+# develop
+# --------
+
+pytest
+pytest-cov
+pip
+pylint
+tox
+twine
+wheel

@@ -19,6 +19,15 @@ import mozsvc.config
 
 from tokenserver.util import _JSONError
 
+__version__      = "2.0.0rc1"
+__description__  = "Storage Engine for Firefox Sync Server, version 1.5"
+__url__          = "https://github.com/mozilla-services/syncserver"
+__license__      = "MPLv2.0"
+__author__       = 'Mozilla Services'
+__author_email__ = 'services-dev@mozilla.org'
+__keywords__     = 'mozilla cloud syncserver'
+
+
 logger = logging.getLogger("syncserver")
 
 

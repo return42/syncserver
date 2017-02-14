@@ -13,13 +13,17 @@ Complete installation instructions are available at:
 Quickstart
 ----------
 
-The Sync Server software runs using **python 2.6** or later, and the build
-process requires **make** and **virtualenv**.  You will need to have the
-following packages (or similar, depending on your operating system) installed:
+The Sync Server software requires::
 
-- python2.7
-- python2.7-dev
-- python-virtualenv
+  Python 2.x >= 2.7 or Python 3.x >= 3.2
+
+The build process requires **make** and **virtualenv**.  You will need to have
+the following packages (or similar, depending on your operating system)
+installed:
+
+- python2 / python3
+- python2-dev / python2-dev
+- python-virtualenv / python3-virtualenv
 - make
 
 Take a checkout of this repository, then run "make build" to pull in the 
